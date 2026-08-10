@@ -1,0 +1,9 @@
+modLoader="javafml"
+loaderVersion="[51,)"
+license="All rights reserved"
+[[mods]]
+modId="beshidycheat"
+version="1.0"
+displayName="BeshidyCheat"
+authors="BESHIDY"
+description="Cheat mod for Minecraft 1.21.11"

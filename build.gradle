@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+    id 'net.minecraftforge.gradle' version '6.+'
+    id 'org.spongepowered.mixin' version '0.7.+'
+}
+group = 'com.beshidy'
+version = '1.0'
+archivesBaseName = 'BeshidyCheat'
+java.toolchain.languageVersion = JavaLanguageVersion.of(17)
+minecraft {
+    mappings channel: 'official', version: '1.21.1'
+    runs { client { workingDirectory project.file('run') } }
+}
+mixin {
+    add sourceSets.main, 'beshidycheat.refmap.json'
+    config 'mixins.beshidycheat.json'
+}
+repositories { mavenCentral() }
+dependencies {
+    minecraft 'net.minecraftforge:forge:1.21.1-51.0.22'
+    annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
+}
